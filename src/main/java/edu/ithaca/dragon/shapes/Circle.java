@@ -8,14 +8,14 @@ public class Circle {
      */
     public Circle(double radius){
         this.radius = radius;
-    
     }
 
     /**
      * @return the area of this circle
      */
     public double calcArea(){
-        throw new RuntimeException("Not implemented yet");
+        double area = radius * radius * Math.PI;
+        return area;
     }
 
     /**
