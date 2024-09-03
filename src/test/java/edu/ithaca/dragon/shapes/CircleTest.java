@@ -31,13 +31,16 @@ public class CircleTest {
     @Test
     public void doubleSizeTest(){
         Circle myCircle = new Circle(1);
-        assertEquals(1, myCircle.doubleSize());
+        myCircle.doubleSize();
+        assertEquals(2, myCircle.radius);
 
         myCircle = new Circle(3.7);
-        assertEquals(7.4, myCircle.doubleSize());
+        myCircle.doubleSize();
+        assertEquals(7.4, myCircle);
 
         myCircle = new Circle(0.07);
-        assertEquals(0.14, myCircle.doubleSize());
+        myCircle.doubleSize();
+        assertEquals(0.14, myCircle);
 
     }
 
