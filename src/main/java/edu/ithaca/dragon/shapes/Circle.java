@@ -10,6 +10,11 @@ public class Circle {
         this.radius = radius;
     }
 
+    /* @return the radius */
+    public double getRadius(){
+        return radius;
+    }
+
     /**
      * @return the area of this circle
      */
