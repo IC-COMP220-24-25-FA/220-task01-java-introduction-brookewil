@@ -44,6 +44,18 @@ public class RectangleTest {
     }
 
     @Test
+    public void longestLineWithinTest(){
+        Rectangle myRectangle = new Rectangle(2, 5);
+        assertEquals(100, myRectangle.longestLineWithin());
+        
+        myRectangle = new Rectangle(2.7, 3.1);
+        assertEquals(70.0569, myRectangle.longestLineWithin(), 0.0001);
+
+        myRectangle = new Rectangle(0.01, 2);
+        assertEquals(0.0004, myRectangle.longestLineWithin(), 0.0001);
+    }
+
+    @Test
     public void TestConstructorError(){
         assertThrows(IllegalArgumentException.class, () -> new Circle(0));
     }
