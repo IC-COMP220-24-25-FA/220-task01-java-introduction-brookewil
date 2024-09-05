@@ -22,7 +22,7 @@ public class RectangleTest {
         assertEquals(10, myRectangle.calcArea());
         
         myRectangle = new Rectangle(2.7, 3.1);
-        assertEquals(8.37, myRectangle.calcArea());
+        assertEquals(8.37, myRectangle.calcArea(), 0.01);
 
         myRectangle = new Rectangle(0.01, 2);
         assertEquals(0.02, myRectangle.calcArea());
