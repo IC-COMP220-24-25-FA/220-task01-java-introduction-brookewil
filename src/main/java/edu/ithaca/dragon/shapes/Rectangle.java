@@ -24,7 +24,7 @@ public class Rectangle {
 
     public double longestLineWithin(){
         // length ^ 2 + width ^2
-        double longest = Math.sqrt(length) + Math.sqrt(width);
+        double longest = (length * length) + (width * width);
         return longest;
     }
     
