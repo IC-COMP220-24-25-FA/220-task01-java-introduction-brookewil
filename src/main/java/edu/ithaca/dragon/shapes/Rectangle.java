@@ -11,7 +11,8 @@ public class Rectangle {
     }
 
     public double calcArea(){
-       throw new RuntimeException("Not implemented yet");
+       double area = length * width;
+       return area;
     }
 
     public void doubleSize(){
