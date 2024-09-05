@@ -17,6 +17,18 @@ public class RectangleTest {
     }
 
     @Test
+    public void calcAreaTest(){
+        Rectangle myRectangle = new Rectangle(2, 5);
+        assertEquals(10, myRectangle.calcArea());
+        
+        myRectangle = new Rectangle(2.7, 3.1);
+        assertEquals(8.37, myRectangle.calcArea());
+
+        myRectangle = new Rectangle(0.01, 2);
+        assertEquals(0.02, myRectangle.calcArea());
+    }
+
+    @Test
     public void TestConstructorError(){
         assertThrows(IllegalArgumentException.class, () -> new Circle(0));
     }
