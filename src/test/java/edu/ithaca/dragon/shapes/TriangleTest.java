@@ -32,6 +32,9 @@ public class TriangleTest {
 
         Triangle myIsoscelesTriangle = new Triangle(7, 7, 4);
         assertEquals(13.42, myIsoscelesTriangle.calcArea(), 0.01);
+
+        Triangle myEquilateralTriangle = new Triangle(5, 5, 5);
+        assertEquals(10.83, myEquilateralTriangle.calcArea(), 0.01);
     }
 
     @Test
@@ -46,6 +49,11 @@ public class TriangleTest {
         // 14, 14, 7
         assertEquals(53.67, myIsoscelesTriangle.calcArea(), 0.01);
 
+        Triangle myEquilateralTriangle = new Triangle(5, 5, 5);
+        myEquilateralTriangle.doubleSize();
+        // 10, 10, 10
+        assertEquals(43.30, myEquilateralTriangle.calcArea(), 0.01);
+
     }
 
     @Test
@@ -55,6 +63,9 @@ public class TriangleTest {
 
         Triangle myIsoscelesTriangle = new Triangle(7, 7, 4);
         assertEquals(7, myIsoscelesTriangle.longestLineWithin(), 0.01);
+
+        Triangle myEquilateralTriangle = new Triangle(5, 5, 5);
+        assertEquals(5, myEquilateralTriangle.longestLineWithin(), 0.01);
     }
 
 
