@@ -41,7 +41,8 @@ public class TriangleTest {
 
     @Test
     public void longestLineWithinTest(){
-        
+        Triangle myTriangle = new Triangle(3, 5, 7);
+        assertEquals(7, myTriangle.longestLineWithin());
     }
 
 
