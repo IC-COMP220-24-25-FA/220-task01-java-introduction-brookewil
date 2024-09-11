@@ -25,6 +25,12 @@ public class TriangleTest {
         assertFalse(myTriangle2.checkTriangle());
     }
 
+    @Test()
+        public void calcArea(){
+            Triangle myTriangle = new Triangle(3, 5, 7);
+            assertEquals(6.50, myTriangle.calcArea(), 0.01);
+        }
+
     @Test
     public void TestConstructorError(){
         assertThrows(IllegalArgumentException.class, () -> new Circle(0));
