@@ -25,10 +25,17 @@ public class TriangleTest {
         assertFalse(myTriangle2.checkTriangle());
     }
 
-    @Test()
+    @Test
         public void calcArea(){
             Triangle myTriangle = new Triangle(3, 5, 7);
             assertEquals(6.50, myTriangle.calcArea(), 0.01);
+        }
+
+    @Test
+        public void doubleSize(){
+            Triangle myTriangle = new Triangle(3, 5, 7);
+            myTriangle.doubleSize();
+            assertEquals(13, myTriangle.calcArea(), 0.01);
         }
 
     @Test
