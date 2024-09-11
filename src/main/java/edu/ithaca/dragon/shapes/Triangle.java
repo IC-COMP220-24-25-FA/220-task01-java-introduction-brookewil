@@ -38,10 +38,10 @@ public class Triangle {
     }
 
     public double longestLineWithin(){
-        if (side1 > side2 && side1 > side3){
+        if (side1 >= side2 && side1 >= side3){
             return side1;
         } else {
-            if (side2 > side1 && side2 > side3){
+            if (side2 >= side1 && side2 >= side3){
                 return side2;
             } else {
                 return side3;
