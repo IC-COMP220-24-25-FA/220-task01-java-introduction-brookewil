@@ -3,6 +3,7 @@ package edu.ithaca.dragon.shapes;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public class ShapeMain {
     
@@ -23,6 +24,22 @@ public class ShapeMain {
         }
 
         //Allow the user to choose one, double the size of that one, and print them all again
+
+        Scanner userRectangle = new Scanner(System.in);
+        System.out.println("Choose a Rectangle: ");
+        int rectanglePick = userRectangle.nextInt();
+        
+        Rectangle pick = rectangles.get(rectanglePick - 1);
+        pick.doubleSize();
+        rectangles.set(rectanglePick, pick);
+
+
+        for (int i = 0; i < rectangles.size(); i++){
+            Rectangle element = rectangles.get(i);
+            System.out.println("Rectangle " + (i + 1) + " Area: " + element.calcArea());
+            System.out.println("Rectangle " + (i + 1) + " Longest Line: " + element.longestLineWithin());
+        }
+
         //Use a loop to repeat the process 5 times
     }
 }
