@@ -6,6 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
+import java.util.ArrayList;
+
 import org.junit.jupiter.api.Test;
 
 import edu.ithaca.dragon.shapes.Triangle;
@@ -38,6 +40,17 @@ public class FunctionPracticeTest {
         assertFalse(FunctionPractice.isGoodDog(4, 0, false));
         assertFalse(FunctionPractice.isGoodDog(5, 0, true));
         assertFalse(FunctionPractice.isGoodDog(7, 20, false));
+
+    }
+
+    @Test
+    public void findFirstLargestTest(){
+        ArrayList<Integer> testList = new ArrayList();
+        testList.add(1);
+        testList.add(2);
+        testList.add(3);
+        testList.add(4);
+        assertEquals(4, FunctionPractice.findFirstLargest(testList));
 
     }
 }
