@@ -29,7 +29,10 @@ public class FunctionPractice {
      */
     public static double calcSalePrice(double originalPrice, double discountPercent, double salesTax){
         // wasn't sure if tax applies to regular price or discounted price so i opted for discounted price
-        throw new RuntimeException("Not Implemented");
+        
+        double discountPrice = originalPrice - (originalPrice * (discountPercent/100));
+        double tax = discountPrice * (salesTax/100);
+        return (discountPrice + tax);
     }
 
     /**
