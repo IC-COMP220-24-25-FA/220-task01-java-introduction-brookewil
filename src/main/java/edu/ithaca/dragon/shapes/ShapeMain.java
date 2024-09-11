@@ -24,22 +24,24 @@ public class ShapeMain {
         }
 
         //Allow the user to choose one, double the size of that one, and print them all again
-
-        Scanner userRectangle = new Scanner(System.in);
-        System.out.println("Choose a Rectangle: ");
-        int rectanglePick = userRectangle.nextInt();
-        
-        Rectangle pick = rectangles.get(rectanglePick - 1);
-        pick.doubleSize();
-        rectangles.set(rectanglePick, pick);
-
-
-        for (int i = 0; i < rectangles.size(); i++){
-            Rectangle element = rectangles.get(i);
-            System.out.println("Rectangle " + (i + 1) + " Area: " + element.calcArea());
-            System.out.println("Rectangle " + (i + 1) + " Longest Line: " + element.longestLineWithin());
-        }
-
         //Use a loop to repeat the process 5 times
+
+        for (int i = 0; i < 5; i++){
+            Scanner userRectangle = new Scanner(System.in);
+            System.out.println("Choose a Rectangle: ");
+            int rectanglePick = userRectangle.nextInt();
+        
+            Rectangle pick = rectangles.get(rectanglePick - 1);
+            pick.doubleSize();
+            rectangles.set(rectanglePick, pick);
+
+
+            for (int j = 0; j < rectangles.size(); j++){
+                Rectangle element = rectangles.get(j);
+                System.out.println("Rectangle " + (j + 1) + " Area: " + element.calcArea());
+                System.out.println("Rectangle " + (j + 1) + " Longest Line: " + element.longestLineWithin());
+            }
+
+        }
     }
 }
