@@ -31,8 +31,10 @@ public class Triangle {
         return area;
     }
 
-    public double doubleSize(){
-        throw new RuntimeException("Not Implemented");
+    public void doubleSize(){
+        side1 *= 2;
+        side2 *= 2;
+        side3 *= 2;
     }
 
     public double longestLineWithin(){
