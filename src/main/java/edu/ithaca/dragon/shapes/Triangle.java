@@ -5,14 +5,17 @@ public class Triangle {
     double sideLength2;
     double sideLength3;
 
+    // sum of the length of any two sides must be greater than the third side
+
     public Triangle(double side1, double side2, double side3){
-        double sideLength1 = side1;
-        double sideLength2 = side2;
-        double sideLength3 = side3;
+        sideLength1 = side1;
+        sideLength2 = side2;
+        sideLength3 = side3;
     }
 
     public double calcArea(){
-        throw new RuntimeException("Not Implemented");
+        double area = (sideLength1 * side2 * side3) / 2;
+        return area
     }
 
     public double doubleSize(){
