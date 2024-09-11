@@ -17,6 +17,15 @@ public class TriangleTest {
     }
 
     @Test
+    public void checkTriangle(){
+        Triangle myTriangle = new Triangle(3, 5, 7);
+        assertTrue(myTriangle.checkTriangle());
+
+        Triangle myTriangle2 = new Triangle(1, 2, 3);
+        assertFalse(myTriangle2.checkTriangle());
+    }
+
+    @Test
     public void TestConstructorError(){
         assertThrows(IllegalArgumentException.class, () -> new Circle(0));
     }

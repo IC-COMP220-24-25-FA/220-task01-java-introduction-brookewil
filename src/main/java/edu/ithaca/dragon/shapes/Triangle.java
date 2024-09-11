@@ -13,9 +13,20 @@ public class Triangle {
         side3 = sideLength3;
     }
 
+    public boolean checkTriangle(){
+        boolean isTriangle = side1 + side2 > side3 && side2 + side3 > side1 && side1 + side3 > side2;
+
+        if (isTriangle){
+            System.out.println("Is a triangle");
+        } else {
+            System.out.println("Not a triangle");
+        }
+        return isTriangle;
+    }
+
     public double calcArea(){
         double area = (side1 * side2 * side3) / 2;
-        return area
+        return area;
     }
 
     public double doubleSize(){
