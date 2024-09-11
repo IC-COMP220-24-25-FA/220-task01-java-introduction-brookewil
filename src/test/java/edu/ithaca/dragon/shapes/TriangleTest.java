@@ -17,7 +17,7 @@ public class TriangleTest {
     }
 
     @Test
-    public void checkTriangle(){
+    public void checkTriangleTest(){
         Triangle myTriangle = new Triangle(3, 5, 7);
         assertTrue(myTriangle.checkTriangle());
 
@@ -26,18 +26,24 @@ public class TriangleTest {
     }
 
     @Test
-        public void calcArea(){
-            Triangle myTriangle = new Triangle(3, 5, 7);
-            assertEquals(6.50, myTriangle.calcArea(), 0.01);
-        }
+    public void calcAreaTest(){
+        Triangle myTriangle = new Triangle(3, 5, 7);
+        assertEquals(6.50, myTriangle.calcArea(), 0.01);
+    }
 
     @Test
-        public void doubleSize(){
-            Triangle myTriangle = new Triangle(3, 5, 7);
-            myTriangle.doubleSize();
-            // should be 6, 10, 14 now
-            assertEquals(25.98, myTriangle.calcArea(), 0.01);
-        }
+    public void doubleSizeTest(){
+        Triangle myTriangle = new Triangle(3, 5, 7);
+        myTriangle.doubleSize();
+        // should be 6, 10, 14 now
+        assertEquals(25.98, myTriangle.calcArea(), 0.01);
+    }
+
+    @Test
+    public void longestLineWithinTest(){
+        
+    }
+
 
     @Test
     public void TestConstructorError(){
