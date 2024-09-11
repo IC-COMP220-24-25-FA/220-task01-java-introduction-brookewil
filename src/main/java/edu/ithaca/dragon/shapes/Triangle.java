@@ -25,7 +25,9 @@ public class Triangle {
     }
 
     public double calcArea(){
-        double area = (side1 * side2 * side3) / 2;
+        double semiperim = (side1 + side2 + side3) / 2;
+        double heron = semiperim * ((semiperim - side1) * (semiperim - side2) * (semiperim - side3));
+        double area = Math.sqrt(heron);
         return area;
     }
 
