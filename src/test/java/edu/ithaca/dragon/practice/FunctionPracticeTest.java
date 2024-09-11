@@ -8,6 +8,8 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.Test;
 
+import edu.ithaca.dragon.shapes.Triangle;
+
 public class FunctionPracticeTest {
 
     @Test
@@ -26,6 +28,16 @@ public class FunctionPracticeTest {
     @Test
     public void calcSalePriceTest(){
         assertEquals(36.38, FunctionPractice.calcSalePrice(40, 15, 7));
+
+    }
+
+    @Test
+    public void isGoodDogTest(){
+        assertTrue(FunctionPractice.isGoodDog(2, 20, true));
+        
+        assertFalse(FunctionPractice.isGoodDog(4, 0, false));
+        assertFalse(FunctionPractice.isGoodDog(5, 0, true));
+        assertFalse(FunctionPractice.isGoodDog(7, 20, false));
 
     }
 }
