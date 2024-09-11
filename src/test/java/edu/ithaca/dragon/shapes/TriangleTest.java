@@ -27,22 +27,34 @@ public class TriangleTest {
 
     @Test
     public void calcAreaTest(){
-        Triangle myTriangle = new Triangle(3, 5, 7);
-        assertEquals(6.50, myTriangle.calcArea(), 0.01);
+        Triangle myScaleneTriangle = new Triangle(3, 5, 7);
+        assertEquals(6.50, myScaleneTriangle.calcArea(), 0.01);
+
+        Triangle myIsoscelesTriangle = new Triangle(7, 7, 4);
+        assertEquals(13.42, myIsoscelesTriangle.calcArea(), 0.01);
     }
 
     @Test
     public void doubleSizeTest(){
-        Triangle myTriangle = new Triangle(3, 5, 7);
-        myTriangle.doubleSize();
+        Triangle myScaleneTriangle = new Triangle(3, 5, 7);
+        myScaleneTriangle.doubleSize();
         // should be 6, 10, 14 now
-        assertEquals(25.98, myTriangle.calcArea(), 0.01);
+        assertEquals(25.98, myScaleneTriangle.calcArea(), 0.01);
+
+        Triangle myIsoscelesTriangle = new Triangle(7, 7, 4);
+        myIsoscelesTriangle.doubleSize();
+        // 14, 14, 7
+        assertEquals(53.67, myIsoscelesTriangle.calcArea(), 0.01);
+
     }
 
     @Test
     public void longestLineWithinTest(){
-        Triangle myTriangle = new Triangle(3, 5, 7);
-        assertEquals(7, myTriangle.longestLineWithin());
+        Triangle myScaleneTriangle = new Triangle(3, 5, 7);
+        assertEquals(7, myScaleneTriangle.longestLineWithin());
+
+        Triangle myIsoscelesTriangle = new Triangle(7, 7, 4);
+        assertEquals(7, myIsoscelesTriangle.longestLineWithin(), 0.01);
     }
 
 
