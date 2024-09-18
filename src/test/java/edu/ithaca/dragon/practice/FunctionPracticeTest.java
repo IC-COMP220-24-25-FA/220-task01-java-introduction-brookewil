@@ -14,6 +14,9 @@ import edu.ithaca.dragon.shapes.Triangle;
 
 public class FunctionPracticeTest {
 
+    // Tests that no matter the order, it will always return the largest number
+    // Also tests that it will catch a number < 0 in any placement
+
     @Test
     public void largestOfThreeTest(){
         assertEquals(5, FunctionPractice.largestOfThree(4, 5, 2));
@@ -27,11 +30,23 @@ public class FunctionPracticeTest {
     }
     
 
+    // Testing various possibilities (ex. sale and/or discount % (number) > original price, if discount and/or sale is 0, etc)
+    // Error if original price is <= 0
+
     @Test
     public void calcSalePriceTest(){
-        assertEquals(36.38, FunctionPractice.calcSalePrice(40, 15, 7));
+        assertEquals(36.38, FunctionPractice.calcSalePrice(40, 15, 7), 0.01);
+        assertEquals(19.53, FunctionPractice.calcSalePrice(15, 7, 40), 0.01);
+        assertEquals(4.83, FunctionPractice.calcSalePrice(7, 40, 15), 0.01);
+        assertEquals(21.20, FunctionPractice.calcSalePrice(20, 0, 6), 0.01);
+        assertEquals(18, FunctionPractice.calcSalePrice(20, 10, 0), 0.01);
+        assertEquals(20, FunctionPractice.calcSalePrice(20, 0, 0), 0.01);
 
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.calcSalePrice(0, 20, 9));
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.calcSalePrice(-5, 20, 9));
     }
+
+    // Testing all possible combinations of true and false
 
     @Test
     public void isGoodDogTest(){
