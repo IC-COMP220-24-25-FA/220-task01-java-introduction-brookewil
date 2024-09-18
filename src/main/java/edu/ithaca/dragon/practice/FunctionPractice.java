@@ -29,6 +29,10 @@ public class FunctionPractice {
      */
     public static double calcSalePrice(double originalPrice, double discountPercent, double salesTax){
         // wasn't sure if tax applies to regular price or discounted price so i opted for discounted price
+
+        if (originalPrice <= 0 ){
+            throw new IllegalArgumentException("Numbers must be greater than 0");
+        }
         
         double discountPrice = originalPrice - (originalPrice * (discountPercent/100));
         double tax = discountPrice * (salesTax/100);
