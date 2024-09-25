@@ -38,4 +38,8 @@ public class Circle implements Shape{
         double diameter = radius * 2;
         return diameter;
     }
+
+    public String toString(){
+        return "This is a Circle with a radius of " + radius;
+    }
 }
