@@ -21,18 +21,14 @@ public class ShapeMain {
             int shapeType = rand.nextInt(3);
 
             if (shapeType == 1){
-                shapes.add(new Circle(rand.nextDouble()));
+                shapes.add(new Circle(rand.nextDouble() * 10));
             } if (shapeType == 2){
-                shapes.add(new Rectangle(rand.nextDouble(), rand.nextDouble()));
+                shapes.add(new Rectangle(rand.nextDouble() * 10, rand.nextDouble() * 10));
             } else {
-                shapes.add(new Triangle(rand.nextDouble(), rand.nextDouble(), rand.nextDouble()));
+                shapes.add(new Triangle(rand.nextDouble() * 10, rand.nextDouble() * 10, rand.nextDouble() * 10));
             }
 
         }
-
-
-
-
 
         // Print each shape (by calling toString on the Shape).
         // Then, write a loop that doubles the size of each shape and prints them again.
