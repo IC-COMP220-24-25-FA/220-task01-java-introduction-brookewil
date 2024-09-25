@@ -45,7 +45,6 @@ public class ShapeMain {
 
 
         //Make a list of 5 randomly-sized rectangles and print their area and the largest line that can be drawn through them
-/**
         List<Rectangle> rectangles = new ArrayList<>();
         rectangles.add(new Rectangle(3, 5));
         rectangles.add(new Rectangle(7, 4));
@@ -78,6 +77,5 @@ public class ShapeMain {
                 System.out.println("Rectangle " + (j + 1) + " Longest Line: " + element.longestLineWithin());
             }
         }
-        */
     }
 }
