@@ -28,6 +28,33 @@ public class CircleTest {
         myCircle = new Circle(0.001);
         assertEquals(0.00000314159, myCircle.calcArea(), 0.0000000001);
     }
+    @Test
+    public void doubleSizeTest(){
+        Circle myCircle = new Circle(1);
+        myCircle.doubleSize();
+        assertEquals(2, myCircle.getRadius());
+
+        myCircle = new Circle(3.7);
+        myCircle.doubleSize();
+        assertEquals(7.4, myCircle.getRadius());
+
+        myCircle = new Circle(0.07);
+        myCircle.doubleSize();
+        assertEquals(0.14, myCircle.getRadius());
+
+    }
+    @Test
+    public void longestLineWithinTest(){
+        Circle myCircle = new Circle(1);
+        assertEquals(2, myCircle.longestLineWithin());
+
+        myCircle = new Circle(3.7);
+        assertEquals(7.4, myCircle.longestLineWithin());
+
+        myCircle = new Circle(0.07);
+        assertEquals(0.14, myCircle.longestLineWithin());
+
+    }
 
     @Test
     public void TestConstructorError(){
