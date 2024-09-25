@@ -30,11 +30,12 @@ public class ShapeMain {
 
         }
 
+        // Print each shape (by calling toString on the Shape).
+
         for (int i = 0; i < 10; i++){
             shapes.get(i).toString();
         }
 
-        // Print each shape (by calling toString on the Shape).
         // Then, write a loop that doubles the size of each shape and prints them again.
 
 
