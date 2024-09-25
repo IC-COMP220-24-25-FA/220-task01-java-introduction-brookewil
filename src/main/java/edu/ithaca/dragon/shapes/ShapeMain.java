@@ -21,19 +21,19 @@ public class ShapeMain {
             int shapeType = rand.nextInt(3);
 
             if (shapeType == 1){
-                shapes.add(new Circle(rand.nextDouble() * 10));
+                shapes.add(new Circle(Math.round(rand.nextDouble() * 1000.0) / 10.00));
             } if (shapeType == 2){
-                shapes.add(new Rectangle(rand.nextDouble() * 10, rand.nextDouble() * 10));
+                shapes.add(new Rectangle((Math.round(rand.nextDouble() * 1000.00) / 10.00), (Math.round(rand.nextDouble() * 1000.00) / 10.00)));
             } else {
-                shapes.add(new Triangle(rand.nextDouble() * 10, rand.nextDouble() * 10, rand.nextDouble() * 10));
+                shapes.add(new Triangle((Math.round(rand.nextDouble() * 1000.00) / 10.00), (Math.round(rand.nextDouble() * 1000.00) / 10.00), (Math.round(rand.nextDouble() * 1000.00) / 10.00)));
             }
 
         }
 
         // Print each shape (by calling toString on the Shape).
 
-        for (int i = 0; i < 10; i++){
-            shapes.get(i).toString();
+        for (int i = 0; i < shapes.size(); i++){
+            System.out.println(shapes.get(i).toString());
         }
 
         // Then, write a loop that doubles the size of each shape and prints them again.
@@ -72,9 +72,7 @@ public class ShapeMain {
                 System.out.println("Rectangle " + (j + 1) + " Area: " + element.calcArea());
                 System.out.println("Rectangle " + (j + 1) + " Longest Line: " + element.longestLineWithin());
             }
-
-            */
-
         }
+        */
     }
 }
