@@ -48,4 +48,8 @@ public class Triangle {
             }
         }
     }
+
+    public String toString(){
+        return "This is a Triangle. Side 1 is " + side1 + ", Side 2 is " + side2 + ", and Side 3 is " + side3;
+    }
 }
