@@ -59,9 +59,19 @@ public class FunctionPractice {
      */
     public static int findFirstLargest(List<Integer> numbers){
         
-        if (len(List<Integer>) == 0){
+        if (numbers.isEmpty()){
             return -1;
         }
+
+        int largest = numbers.get(0);
+        for (int i = 0; i < numbers.size(); i++){
+
+            if (numbers.get(i) > largest){
+                largest = numbers.get(i);
+            }
+        }
+
+        return largest;
     }
 
     /**
