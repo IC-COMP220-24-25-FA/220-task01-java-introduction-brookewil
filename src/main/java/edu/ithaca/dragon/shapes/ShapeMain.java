@@ -38,6 +38,11 @@ public class ShapeMain {
 
         // Then, write a loop that doubles the size of each shape and prints them again.
 
+        for (int i = 0; i < shapes.size(); i++){
+            shapes.get(i).doubleSize();
+            System.out.println(shapes.get(i).toString());
+        }
+
 
         //Make a list of 5 randomly-sized rectangles and print their area and the largest line that can be drawn through them
 /**
