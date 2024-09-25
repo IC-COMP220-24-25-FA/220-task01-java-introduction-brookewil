@@ -4,13 +4,36 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Random;
 
 public class ShapeMain {
     
     public static void main(String[] args){
 
         // Create a list that holds shapes
+
+        List<Shape> shapes = new ArrayList<>();
+
         // Create a loop that adds 10 shapes to the list, choosing randomly between whether each shape is a Circle, Rectangle, or triangle.
+        
+        Random rand = new Random();
+        for (int i = 0; i < 10; i++){
+            int shapeType = rand.nextInt(3);
+
+            if (shapeType == 1){
+                shapes.add(new Circle(rand.nextDouble()));
+            } if (shapeType == 2){
+                shapes.add(new Rectangle(rand.nextDouble(), rand.nextDouble()));
+            } else {
+                shapes.add(new Triangle(rand.nextDouble(), rand.nextDouble(), rand.nextDouble()));
+            }
+
+        }
+
+
+
+
+
         // Print each shape (by calling toString on the Shape).
         // Then, write a loop that doubles the size of each shape and prints them again.
 
