@@ -27,5 +27,9 @@ public class Rectangle {
         double longest = (length * length) + (width * width);
         return longest;
     }
+
+    public String toString(){
+        return "This is a Rectangle with a length of " + length + " and a width of " + width;
+    }
     
 }
