@@ -30,12 +30,16 @@ public class ShapeMain {
 
         }
 
+        for (int i = 0; i < 10; i++){
+            shapes.get(i).toString();
+        }
+
         // Print each shape (by calling toString on the Shape).
         // Then, write a loop that doubles the size of each shape and prints them again.
 
 
         //Make a list of 5 randomly-sized rectangles and print their area and the largest line that can be drawn through them
-
+/**
         List<Rectangle> rectangles = new ArrayList<>();
         rectangles.add(new Rectangle(3, 5));
         rectangles.add(new Rectangle(7, 4));
@@ -67,6 +71,8 @@ public class ShapeMain {
                 System.out.println("Rectangle " + (j + 1) + " Area: " + element.calcArea());
                 System.out.println("Rectangle " + (j + 1) + " Longest Line: " + element.longestLineWithin());
             }
+
+            */
 
         }
     }
